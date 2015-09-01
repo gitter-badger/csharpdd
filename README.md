@@ -1,4 +1,5 @@
-# csharpdd
+
+
 Demostración de Patrones de Diseño segun Cooper ( C# Design Patterns eBook)
 
 Los objetivos principales de los patrones de diseño son, entre otros:
