@@ -20,7 +20,7 @@ Patrones estructurales: Se centran en problemas relacionados con la forma de est
 
 Patrones de comportamiento: Permiten resolver problemas relacionados con el comportamiento de la aplicación, normalmente en tiempo de ejecución. Por ejemplo, el patrón Strategy proporciona diferentes métodos (o algoritmos) para resolver un mismo problema, pudiendo decidir en tiempo de ejecución cuál de ellos utilizar.
 
-Favor de definir su PDD a continuación
+Favor de definir su PDD y clasificalo a continuación en el rublo que le corresponda.
 
 
 
