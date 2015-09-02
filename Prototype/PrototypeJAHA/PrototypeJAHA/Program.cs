@@ -6,7 +6,26 @@ namespace PrototypeJAHA
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hi PDD partners!");
+			Nieto AlexPaz = new Nieto ();
+
 		}
+	}
+
+	class Padre
+	{
+		public void Name(string nombre)
+		{
+			Console.WriteLine (nombre);
+		}
+	}
+
+	class Hijo: Padre
+	{
+		public string Nombramiento { get; set;}
+	}
+
+	class Nieto: Hijo
+	{
+
 	}
 }
