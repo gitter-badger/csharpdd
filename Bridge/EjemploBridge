@@ -1,0 +1,101 @@
+//esta es la interfaz de la implementacion (implementor)
+
+public interface Implementor {
+
+public int operacion(int a, int b);
+
+}
+
+//esta es una implementación concreta (concretImplementor)
+
+public class Sumar implements Implementor {
+
+public int operacion(int a, int b) {
+
+return a+b;
+
+}
+
+}
+
+//esta es una implementación concreta (concretImplementor)
+
+public class Multiplicar implements Implementor {
+
+public int operacion(int a, int b) {
+
+return a*b;
+
+}
+
+}
+
+// esta es una implementación concreta (concretImplementor)
+
+public class Dividir implements Implementor {
+
+public int operacion(int a, int b) {
+
+return a/b;
+
+}
+
+}
+
+//esta es la interfaz de la abstraccion (abstraction)
+
+public interface Abstraction {
+
+public int operar(int num1, int num2);
+
+}
+
+//esta clase esxtiende la interfaz definida por abstraction (RedefinedAbstraction)
+
+import operacion.Implementor;
+
+public class RefinedAbstraction implements Abstraction {
+
+Implementor implementacion=null;
+
+public RefinedAbstraction(Implementor imp){
+
+this.implementacion=imp;
+
+}
+
+public int operar(int num1, int num2) {
+
+return implementacion.operacion(num1,num2);
+
+}
+
+}
+
+//Es la clase cliente que utiliza la abstraccion (Client)
+
+import operacion.Implementor;
+
+import operacion.Abstraction;
+
+public class Cliente {
+
+public static void main(String[] args) {
+
+int num1=4;
+
+int num2=2;
+
+Implementor [] imp= {new Sumar(),new Multiplicar(), new Dividir()};
+
+Abstraction abst[] ={ new RefinedAbstraction(imp[0]), new RefinedAbstraction(imp[1]), new RefinedAbstraction(imp[2])};
+
+for (int i=0; i<3;i++){
+
+System.out.println(abst[i].operar(num1, num2));
+
+}
+
+}
+
+}
