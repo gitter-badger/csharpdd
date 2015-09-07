@@ -1,4 +1,4 @@
---------------------------------------------El patrón Singleton-----------------------------------------------
+------------------------------------------------El patrón Singleton-----------------------------------------------
 
 
 ****Definicion:Permite asegurar que de una clase concreta existe una unica instacia y propociona un unico metodo que lo devuelve.
