@@ -12,3 +12,4 @@ El patron proporcionan una alternativa flexible a la herencia para extender func
 La gran ventaja es que nos permite extender objetos incluso en situaciones cuando la extensión vía herencia no es viable o no es necesaria. Adicionalmente nos ayuda a conservar el principio de Abierto/Cerrado, en donde se dicta que cada entidad debe estar abierta a extensión pero cerrada a modificación.
 
 Otra ventaja es que las decoraciones nos evitan la labor de crear clases complejas con mucho código, que en la mayoría de los casos no será evaluado. Nosotros podemos usar distintas combinaciones (o secuencias) de decoraciones para generar distintos comportamientos o resultados.
+
