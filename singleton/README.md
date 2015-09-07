@@ -14,8 +14,6 @@ Solución
 
 Garantizar una única instancia.
 
-Bb972272.art267-img01-394x161(es-es,MSDN.10).gif
-Figura 1: Diagrama OMT de Singleton, tomado del libro del GoF.
 
 Participantes
 
