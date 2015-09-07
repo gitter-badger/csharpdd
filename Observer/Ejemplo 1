@@ -1,0 +1,106 @@
+//represents a stock in an application
+public class Stock:ObservableImpl {
+      
+   //instance variable for ask price
+   object _askPrice;
+
+   //property for ask price
+   public object AskPrice {
+ 
+      set {    _askPrice=value;
+         base.NotifyObservers(_askPrice);
+                   }//set
+      
+   }//AskPrice property
+ 
+}//Stock
+
+//represents the user interface in the application
+public class StockDisplay:IObserver {
+
+   public void Notify(object anObject){ 
+      Console.WriteLine("The new ask price is:" + anObject); 
+   }//Notify
+
+}//StockDisplay
+
+public class MainClass{
+
+   public static void Main() {
+
+      //create new display and stock instances
+      StockDisplay stockDisplay=new StockDisplay();
+      Stock stock=new Stock();
+
+      //register the grid
+      stock.Register(stockDisplay);
+
+      //loop 100 times and modify the ask price
+      for(int looper=0;looper < 100;looper++) {
+         stock.AskPrice=looper;
+      }
+
+      //unregister the display
+      stock.UnRegister(stockDisplay);
+      
+   }//Main
+   
+}//MainClass
+
+Observer Example (Visual Basic .NET)
+
+'Represents a stock in an application
+Public Class Stock
+
+    Inherits ObservableImpl
+
+    'instance variable for ask price
+    Dim _askPrice As Object
+
+    'property for ask price
+    Public WriteOnly Property AskPrice()
+
+        Set(ByVal value As Object)
+            _askPrice = value
+            NotifyObservers(_askPrice)
+        End Set
+
+    End Property
+
+End Class
+
+'represents the user interface in the application
+Public Class StockDisplay
+
+    Implements IObserver
+
+    Public Sub Notify(ByVal anObject As Object) Implements IObserver.Notify
+
+        Console.WriteLine("The new ask price is:" & anObject)
+
+    End Sub
+
+End Class
+
+Public Class MainClass
+
+    Shared Sub Main()
+
+   'create new grid and stock instances
+       Dim stockDisplay As StockDisplay = New StockDisplay()
+   Dim stock As Stock = New Stock()
+   
+   Dim looper As Integer
+
+        'register the display
+        stock.Register(stockDisplay)
+
+        'loop 100 times and modify the ask price
+        For looper = 0 To 100
+            stock.AskPrice = looper
+        Next looper
+
+        'unregister the display
+        stock.UnRegister(stockDisplay)
+
+End Sub
