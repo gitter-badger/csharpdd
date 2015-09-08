@@ -1,0 +1,6 @@
+/home/oscar/Documentos/State/State/State/obj/x86/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/oscar/Documentos/State/State/State/obj/x86/Release/State.gtk-gui.gui.stetic
+/home/oscar/Documentos/State/State/State/bin/Release/State.exe.mdb
+/home/oscar/Documentos/State/State/State/bin/Release/State.exe
+/home/oscar/Documentos/State/State/State/obj/x86/Release/State.exe
+/home/oscar/Documentos/State/State/State/obj/x86/Release/State.exe.mdb

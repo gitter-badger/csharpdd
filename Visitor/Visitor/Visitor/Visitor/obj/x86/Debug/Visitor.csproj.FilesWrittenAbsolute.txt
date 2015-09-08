@@ -1,0 +1,6 @@
+/home/chriis/Documentos/Patrones/Visitor/Visitor/Visitor/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/chriis/Documentos/Patrones/Visitor/Visitor/Visitor/obj/x86/Debug/Visitor.gtk-gui.gui.stetic
+/home/chriis/Documentos/Patrones/Visitor/Visitor/Visitor/bin/Debug/Visitor.exe.mdb
+/home/chriis/Documentos/Patrones/Visitor/Visitor/Visitor/bin/Debug/Visitor.exe
+/home/chriis/Documentos/Patrones/Visitor/Visitor/Visitor/obj/x86/Debug/Visitor.exe
+/home/chriis/Documentos/Patrones/Visitor/Visitor/Visitor/obj/x86/Debug/Visitor.exe.mdb
