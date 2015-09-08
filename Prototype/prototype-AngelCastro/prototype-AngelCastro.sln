@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prototype-AngelCastro", "prototype-AngelCastro\prototype-AngelCastro.csproj", "{6B3BE7C1-1C4B-4C74-8012-DA22B8CC2E01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B3BE7C1-1C4B-4C74-8012-DA22B8CC2E01}.Debug|x86.ActiveCfg = Debug|x86
+		{6B3BE7C1-1C4B-4C74-8012-DA22B8CC2E01}.Debug|x86.Build.0 = Debug|x86
+		{6B3BE7C1-1C4B-4C74-8012-DA22B8CC2E01}.Release|x86.ActiveCfg = Release|x86
+		{6B3BE7C1-1C4B-4C74-8012-DA22B8CC2E01}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = prototype-AngelCastro\prototype-AngelCastro.csproj
+	EndGlobalSection
+EndGlobal
