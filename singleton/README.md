@@ -1,5 +1,7 @@
-																																													El patrón Singleton
-Definicion:Permite asegurar que de una clase concreta existe una unica instacia y propociona un unico metodo que lo devuelve.
+------------------------------------------------El patrón Singleton----------------------------------------------------
+
+
+****Definicion:Permite asegurar que de una clase concreta existe una unica instacia y propociona un unico metodo que lo devuelve.
  
 El patrón Singleton garantiza que una clase sólo tenga una instancia y proporciona un punto de acceso global a ésta instancia.
 
@@ -11,12 +13,12 @@ Garantiza que una clase sólo tenga una instancia y proporciona un punto de acce
 
 Varios clientes distintos precisan referenciar a un mismo elemento y queremos asegurarnos de que no hay más de una instancia de ese elemento.
 
-Solución
+*****Solución
 
 Garantizar una única instancia.
 
 
-Participantes
+-----------------------------------------------Participantes------------------------------------------------------
 
     Singleton
 
