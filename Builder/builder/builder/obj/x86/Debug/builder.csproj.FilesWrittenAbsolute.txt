@@ -1,0 +1,5 @@
+/home/itt/Escritorio/builder/builder/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/itt/Escritorio/builder/builder/bin/Debug/builder.exe.mdb
+/home/itt/Escritorio/builder/builder/bin/Debug/builder.exe
+/home/itt/Escritorio/builder/builder/obj/x86/Debug/builder.exe
+/home/itt/Escritorio/builder/builder/obj/x86/Debug/builder.exe.mdb

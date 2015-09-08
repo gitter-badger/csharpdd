@@ -1,0 +1,96 @@
+En nuestra compañía CoolCorp, estamos desarrollando un software personalizado para controlar robots. 
+Los robots no los construye nuestra compañía, si no que se los compramos a USRobots.
+
+Los robots que nos proporcionan tienen su propia interface de comunicaciones. Es la siguiente:
+
+interface USRobotsInterface
+{
+    float CurrentSpeedInMilesPerHour { get; set; }
+    void EnablePartialFirstLawMode();  
+    void Jump(float feet);      
+}
+
+Un ejemplo de implementación de un robot de USRobots sería el siguiente:
+
+class USRobot:USRobotsInterface
+{  
+    private float CurrentSpeed;     
+     
+    public float CurrentSpeedInMilesPerHour
+    {
+        get { return CurrentSpeed; }
+        set { CurrentSpeed = value;}
+    }
+ 
+    public USRobot()
+    {
+        this.CurrentSpeed = 0;           
+    }
+ 
+    public void EnablePartialFirstLawMode()
+    {           
+        Console.WriteLine("Partial first law enabled");
+    }
+ 
+    public void Jump(float feet)
+    {
+        Console.WriteLine("Jump !!");
+    }
+}
+
+El problema de este enfoque es que estaríamos dependiendo de una entidad externa, que no controlamos. 
+Si USRobots actualiza sus implementaciones, añadiendo métodos o cambiando tipos, nosotros tendríamos que 
+modificar una gran cantidad de código. Por no hablar de que estaremos incumpliendo el principio DRY
+(Don't Repeat Yourself).
+
+interface CoolCorpInterface
+{
+    float CurrentSpeedInKilometersPerHour { get; set; }
+    void Jump(float meters);
+}
+
+Todos los robots con los que trabajemos, implementarán dicha interface, ya que es la que mejor se adapta a 
+nuestras necesidades. Ahora solo tenemos que desarrollar el adaptador en si, que en este caso tendrá el siguiente 
+código:
+
+class CoolCorpRobot:CoolCorpInterface
+{
+    private USRobot robot;
+ 
+    public CoolCorpRobot()
+    {
+        this.robot = new USRobot();
+    }
+ 
+    public float CurrentSpeedInKilometersPerHour
+    {
+        get
+        {
+            return this.robot.CurrentSpeedInMilesPerHour * 1.6093f;
+        }
+        set
+        {
+            this.robot.CurrentSpeedInMilesPerHour = value * 0.62137f;
+        }
+    }
+ 
+    public void Jump(float meters)
+    {
+        this.robot.Jump(meters * 0.3048f);
+    }
+}
+
+Como se puede ver, nuestro CoolCorpRobot implementa la interface que hemos definido antes. 
+En el constructor, creamos un objeto USRobot, que al final es el que realiza las operaciones. 
+La clase no implementa el método EnablePartialFirstLawMode porque no lo necesitamos.
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        CoolCorpInterface robot = new CoolCorpRobot();
+        robot.CurrentSpeedInKilometersPerHour = 3;
+        robot.Jump(12);
+        Console.ReadKey();
+    }
+}
