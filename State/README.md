@@ -18,6 +18,7 @@ La estructura del patron de diseño state es la siguiente.
 ●ConcreteState: Cada subclase implementa el comportamiento asociado con un estado del contexto.
 
 
+
 Colaboraciones
 
 La máquina de estados delega las llamadas a los métodos dependiendo del estado en curso hacia un objeto de 
