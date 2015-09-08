@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="PDDLeslieCG-AbstractFactory/PDDLeslieCG-AbstractFactory.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PDDLeslieCG-AbstractFactory/Program.cs">
+    <Files>
+      <File FileName="PDDLeslieCG-AbstractFactory/Program.cs" Line="4" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
