@@ -11,16 +11,12 @@ Estructura
 
 La estructura del patron de diseño state es la siguiente.
 
-●MáquinaEstados (Pedido)   es  una  clase  concreta  que  describe  los  objetos  que  son  máquinas  de 
-estados, es decir que poseen un conjunto de estados que pueden ser descritos mediante un diagrama 
-de estados y transiciones. Esta clase mantiene una referencia hacia una instancia de una subclase de 
-Estado que define el estado en curso; 
+●Context: Define la Interfaz y mantiene una instancia con el estado actual.
 
-●Estado (EstadoPedido)   es  una  clase  abstracta  que  incluye  los  métodos  ligados  al  estado  y  que 
-gestionan la asociación con la máquina de estados; 
+●State: Define una interfaz para el comportamiento asociado a un determinado estado del Contexto.
 
-●EstadoConcretoA  y  EstadoConcretoB  ( PedidoEnCurso ,  PedidoValidado  y  PedidoEntregado ) son 
-subclases concretas que implementan el comportamiento de los métodos relativos a cada estado. 
+●ConcreteState: Cada subclase implementa el comportamiento asociado con un estado del contexto.
+
 
 Colaboraciones
 
