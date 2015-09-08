@@ -5,3 +5,6 @@ Permite que ciertos pasos de un algoritmo definido en una operación de una supe
 
 
 
+
+
+
