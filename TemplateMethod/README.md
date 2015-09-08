@@ -2,3 +2,4 @@ Dentro del marco de la programación orientada a objetos, el patron Template Met
 Permite que ciertos pasos de un algoritmo definido en una operación de una superclase, sean redefinidos en las subclases sin necesidad de tener que sobreescribir la operaciń entera.
 
 
+
