@@ -6,26 +6,33 @@ namespace PrototypeJAHA
 	{
 		public static void Main (string[] args)
 		{
-			Nieto AlexPaz = new Nieto ();
+			Hijo AlexPaz = new Hijo ();
+			AlexPaz.Nombramiento = "Erick Alejandro";
+			AlexPaz.Name(AlexPaz.Nombramiento);
+			AlexPaz.Estudiar();
+			Console.ReadLine();
 
 		}
 	}
 
-	class Padre
+	class Humano
 	{
-		public void Name(string nombre)
+		public void Name(string n)
 		{
-			Console.WriteLine (nombre);
+			Console.WriteLine (n);
 		}
 	}
 
-	class Hijo: Padre
+	class Padre: Humano
 	{
 		public string Nombramiento { get; set;}
 	}
 
-	class Nieto: Hijo
+	class Hijo: Padre
 	{
-
+		public string Estudiar()
+		{
+			Console.WriteLine ("¿Qué debería estudiar?");
+		}
 	}
 }
