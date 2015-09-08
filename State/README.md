@@ -31,3 +31,5 @@ El patrón se utiliza en los siguientes casos:
 
 ●La  implementación  de  esta  dependencia  del  estado  mediante  instrucciones  condicionales  se  vuelve  muy 
 compleja. 
+
+
