@@ -23,12 +23,15 @@ gestionan la asociación con la máquina de estados;
 subclases concretas que implementan el comportamiento de los métodos relativos a cada estado. 
 
 Colaboraciones
+
 La máquina de estados delega las llamadas a los métodos dependiendo del estado en curso hacia un objeto de 
 estado. 
 La máquina de estados puede transmitir al objeto de estado una referencia hacia sí misma si es necesario. Esta 
 referencia puede pasarse durante la delegación o en la propia inicialización del objeto de estado. 
 
 El patrón se utiliza en los siguientes casos: 
-●El comportamiento de un objeto depende de su estado; 
+
+●El comportamiento de un objeto depende de su estado;
+
 ●La  implementación  de  esta  dependencia  del  estado  mediante  instrucciones  condicionales  se  vuelve  muy 
 compleja. 
