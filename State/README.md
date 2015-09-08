@@ -27,7 +27,6 @@ referencia puede pasarse durante la delegación o en la propia inicialización d
 
 El patrón se utiliza en los siguientes casos: 
 
-
 ●El comportamiento de un objeto depende de su estado;
 
 ●La  implementación  de  esta  dependencia  del  estado  mediante  instrucciones  condicionales  se  vuelve  muy 
