@@ -1,5 +1,7 @@
 ------------------------------------------------El patrón Singleton----------------------------------------------------
 
+DIagrama UML: https://drive.google.com/file/d/0B1UGjQsv1xltZzVjZGc0U0g0czg/view?usp=sharing
+
 
 ****Definicion:Permite asegurar que de una clase concreta existe una unica instacia y propociona un unico metodo que lo devuelve.
  
