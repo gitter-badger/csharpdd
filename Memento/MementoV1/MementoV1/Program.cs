@@ -1,96 +1,118 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MementoV1
 {
 	class MainClass
 	{
-		public static void Main (string[] args)
+		public interface Memento
 		{
-			Originator<string> orig = new Originator<string>();
-
-			orig.SetState("state0");
-			Caretaker<string>.SaveState(orig); //save state of the originator
-			orig.ShowState();
-
-			orig.SetState("state1");
-			Caretaker<string>.SaveState(orig); //save state of the originator
-			orig.ShowState();
-
-			orig.SetState("state2");
-			Caretaker<string>.SaveState(orig); //save state of the originator
-			orig.ShowState();
-
-			//restore state of the originator
-			Caretaker<string>.RestoreState(orig, 0);
-			orig.ShowState();  //shows state0
-
 		}
-	}
-
-	//object that stores the historical state
-	public class Memento<t>
-	{
-		private T state;
-
-		public T GetState()
+		public class MementoImpl : Memento
 		{
-			return state;
+			protected IList<OpcionVehiculo> opciones =
+				new List<OpcionVehiculo>();
+			public IList<OpcionVehiculo> estado
+			{
+				get
+				{
+					return opciones;
+				}
+				set
+				{
+					this.opciones.Clear();
+					foreach (OpcionVehiculo opcion in value)
+						this.opciones.Add(opcion);
+				}
+			}
 		}
 
-		public void SetState(T state)
+		public class CarritoOpciones
 		{
-			this.state = state;
-		}
-	}
+			protected IList<OpcionVehiculo> opciones =
+				new List<OpcionVehiculo>();
+			public Memento agregaOpcion (OpcionVehiculo
+				opcionVehiculo)
+			{
+				MementoImpl resultado = new MementoImpl ();
+				resultado.estado = opciones;
+				IList<OpcionVehiculo> opcionesIncompatibles =
+					opcionVehiculo.opcionesIncompatibles;
+				foreach (OpcionVehiculo opcion in
+					opcionesIncompatibles)
+					opciones.Remove (opcion);
+				opciones.Add (opcionVehiculo);
+				return resultado;
+			}
 
-	//the object that we want to save and restore, such as a check point in an application
-	public class Originator<t>
-	{
-		private T state;
+			public void anula (Memento memento)
+			{
+				MementoImpl mementoImplInstance = memento as MementoImpl;
+				if (mementoImplInstance == null)
+					return;
+				opciones = mementoImplInstance.estado;
+			}
 
-		//for saving the state
-		public Memento<t> CreateMemento()
-		{
-			Memento<t> m = new Memento<t>();
-			m.SetState(state);
-			return m;
-		}
-
-		//for restoring the state
-		public void SetMemento(Memento<t> m)
-		{
-			state = m.GetState();
-		}
-
-		//change the state of the Originator
-		public void SetState(T state)
-		{
-			this.state = state;
-		}
-
-		//show the state of the Originator
-		public void ShowState()
-		{
-			Console.WriteLine(state.ToString());
-		}
-	}
-
-	//object for the client to access
-	public static class Caretaker<t>
-	{
-		//list of states saved
-		private static List<memento><t>> mementoList = new List<memento><t>>();
-
-		//save state of the originator
-		public static void SaveState(Originator<t> orig)
-		{
-			mementoList.Add(orig.CreateMemento());
+			public void visualiza ()
+			{
+				Console.WriteLine ("Contenido del carrito de opciones");
+				foreach (OpcionVehiculo opcion in opciones)
+					opcion.visualiza ();
+				Console.WriteLine ();
+			}
 		}
 
-		//restore state of the originator
-		public static void RestoreState(Originator<t> orig, int stateNumber)
+		public class OpcionVehiculo
 		{
-			orig.SetMemento(mementoList[stateNumber]);
+			protected string nombre;
+
+			public IList<OpcionVehiculo> opcionesIncompatibles
+			{ get; protected set; }
+
+			public OpcionVehiculo (string nombre)
+			{
+				opcionesIncompatibles = new List<OpcionVehiculo> ();
+				this.nombre = nombre;
+			}
+
+			public void agregaOpcionIncompatible (OpcionVehiculo
+				opcionIncompatible)
+			{
+				if (!opcionesIncompatibles.Contains (opcionIncompatible)) {
+					opcionesIncompatibles.Add (opcionIncompatible);
+					opcionIncompatible.agregaOpcionIncompatible (this);
+				}
+			}
+
+			public void visualiza ()
+			{
+				Console.WriteLine ("opción: " + nombre);
+			}
+		}
+
+		public class Usuario
+		{
+			static void Main (string[] args)
+			{
+				Memento memento;
+				OpcionVehiculo opcion1 = new OpcionVehiculo (
+					"Asientos en cuero");
+
+				OpcionVehiculo opcion2 = new OpcionVehiculo (
+					"Reclinables");
+				OpcionVehiculo opcion3 = new OpcionVehiculo (
+					"Asientos deportivos");
+				opcion1.agregaOpcionIncompatible (opcion3);
+				opcion2.agregaOpcionIncompatible (opcion3);
+				CarritoOpciones carritoOpciones = new CarritoOpciones ();
+				carritoOpciones.agregaOpcion (opcion1);
+				carritoOpciones.agregaOpcion (opcion2);
+				carritoOpciones.visualiza ();
+				memento = carritoOpciones.agregaOpcion (opcion3);
+				carritoOpciones.visualiza ();
+				carritoOpciones.anula (memento);
+				carritoOpciones.visualiza ();
+			}
 		}
 	}
 }

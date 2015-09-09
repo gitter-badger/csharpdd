@@ -1,0 +1,5 @@
+/home/eliotrojas/Documents/7mo Semestre/Patrones de Diseno/Patrones/csharpdd/Memento/MementoV1/MementoV1/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/eliotrojas/Documents/7mo Semestre/Patrones de Diseno/Patrones/csharpdd/Memento/MementoV1/MementoV1/bin/Debug/MementoV1.exe.mdb
+/home/eliotrojas/Documents/7mo Semestre/Patrones de Diseno/Patrones/csharpdd/Memento/MementoV1/MementoV1/bin/Debug/MementoV1.exe
+/home/eliotrojas/Documents/7mo Semestre/Patrones de Diseno/Patrones/csharpdd/Memento/MementoV1/MementoV1/obj/x86/Debug/MementoV1.exe
+/home/eliotrojas/Documents/7mo Semestre/Patrones de Diseno/Patrones/csharpdd/Memento/MementoV1/MementoV1/obj/x86/Debug/MementoV1.exe.mdb
