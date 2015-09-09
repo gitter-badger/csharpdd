@@ -1,0 +1,208 @@
+//Torres Paramo Ana Karen
+using System;
+
+public abstract class Expresion
+{
+  public abstract bool ecalua (string descripcion);
+  
+  //parte analisis sintactico
+  protected static string fuente;
+  protected static int indice;
+  protected static string pieza;
+  
+  protected static void siguientePieza()
+  {
+    while((indice<fuente.Length) && (fuente[indice]==' '))
+      indice++;
+    if(indice==fuente.Length)
+      pieza=null;
+    else if ((fuente[indice]=='(')||(funete[indice]==')'))
+    {
+      pieza=fuente.Substring (indice,1);
+      indice++;
+    }
+    else
+    {
+      int inicio=indice;
+      while((indice<fuente.Length)&&(fuente[indice]!= ' ')&&(fuente[indice]!=')'))
+        indice++;
+      pieza=fuente.Substring(inicio, indice-inicio);
+    }
+  }
+  
+  public static Expresion analiza (string fuente)
+  {
+    Expresion.fuente=fuente;
+    indice=0;
+    siguientePieza();
+    return OperadorO.parsea();
+  }
+  
+  public static Expresion parsea()
+  {
+    Expresion resultado;
+    if (pieza== "(")
+    {
+      siguientePieza();
+      resultado=OperadorO.parsea();
+      if (pieza==null)
+        throw new Exception("Error de sintaxis");
+      if(pieza!=")")
+        throw new Esception ("Error de sintaxis");
+      siguientePieza();
+    }
+    else
+      resultado=PalabraClave.parsea();
+    return resultado;
+    }
+  }
+  
+  //Codigo de las subclases de expresion
+  //La clase concreta PAlabraClave cuyo metodo evalua busca la palabra-clave en la descripcion. Esta gestiona a su vez el analisis sintactico de la palabra-clave
+  
+  using System;
+  
+  public class PalabraClave:Expresion
+  {
+    protected string palabraClave;
+    
+    public PalabraClave(string palabraClave)
+    {
+      this.palabraClave=palabraClave;
+    }
+    
+    public override bool evaalua(string descripcion)
+    {
+      return description.IndexOf(palabraClave) != -1;
+    }
+    
+    //parte analisis sintactico
+    public static new Expresion parsea()
+    {
+      Expresion resultado;
+      resultado=new PalabraClave(pieza);
+      siguientePieza;
+      return resultado;
+    }
+  }
+  
+//La clase abstracta OperadorBinario gestiona los enlaces hacia los dos operandos del operador
+  public abstract class OperadorBinario : Expresion
+  {
+    protected Expresion operamdoIzquierdo, operandoDerecho;
+    
+    public OperadorBinario (Expresion operandoIzquierdo Expresion operandoDerecho)
+    {
+      this.operandoIzquierdo = operandoIzquierdo;
+      this.operandoDerecho = operandoDerecho;
+    }
+  }
+  
+//La clase concreta OperadorO implementa el metodo evalua y gestiona el analisis de un termino
+  using System;
+  
+  public class OperadorO :OperadorBinario
+  {
+    public OperadorO (Expresion operadndoIzquierdo, Expresion operandoDerecho): base(operandoIzquierdo, operandoDerecho){ }
+    
+    public override bool evalua (string descripcion)
+    {
+      return operandoIzquierdo.evalua(descripcion)||operandoDerecho.evalua(descripcion);
+    }
+    
+    //parte analisis sintactico
+    public static new Espresion parsea()
+    {
+      Expresion resultadoIzquierdo, resultadoDerecho;
+      resultadoIzquierdo =Operadory.parsea();
+      while((pieza!=null)&&(pieza=="o"))
+      {
+        siguientePieza();
+        resultadoDEreccho=OperadorY.parsea();
+        resultadoIzquierdo=new OperadorO(resultadoIzquierdo,resultadoDrecho);
+      }
+      return resultadoIzquierdo;
+    }
+  }
+  
+//La clase concreta OperadorY implementa el metodo evalua y gestiona el analisis sintactico de un factor
+  using System;
+  public class OperadorY:OperadorBinario
+  {
+    public OperadorY(Expresion operandoIzquierdo, Expresion operandoDerencho) : base (operandoIzquierdo, operandoDerecho) { }
+    
+    public override bool evalua(string descripcion)
+    {
+      return operandoIzquierdo.evalua(descripcion) && operandoDerecho.evalua(descripcion)
+    }
+    
+    //parte analisis sintactico 
+    public static new Expresion parsea()
+    {
+      Expresion resultadoIzquierdo, resultadoDerecho;
+      resultadoIzquierdo = OperadorY.parsea();
+      while ((pieza != null) && (pieza == "o"))
+      {
+        siguientePieza();
+        resultadoDerecho=OperadorY.parsea()
+        resultadoIzquierdo=new OperadorO(resultadoIzquierdo,resultadoDerecho);
+      }
+      return resultadoIzquierdo;
+    }
+  }
+  
+//La clase concreta OperadorY implementa el metodo evalua y gestiona el analisis sintactico de un factor
+  using System;
+  public class OperadorY : OperadorBinario
+  {
+    public OperadorY (Expresion operandoIzquierdo, Expresion operandoDerecho):base (operandoIzquierdo, operandoDerecho) { }
+    
+    public override bool evalua (string descripcion)
+    {
+      return operandoIzquierdo.evalua(descipcion)&& operandoDerecho.evalua (descripcion);
+    }
+    
+    //parte analisis sintactico
+    public static new Expresion parsea()
+    {
+      Expresion resultadoIzquierdo, resultadoDerecho;
+      resultadoIzquierdo =Expresion.parsea();
+      while ((pieza != null) && (pieza== "y"))
+      {
+        siguientePieza();
+        resultadoDerecho =Expresion.parsea();
+        rsultadoIzquierdo=new OperadorY(resultadoIzquierdo, resultadoDerecho);
+      }
+      return resultadoIzquierdo;
+    }
+  }
+  
+//La clase Usuario implementa el programa principal
+  using System;
+  public class Usuario
+  {
+    static void Main (string [] args)
+    {
+      Expresion expresionConsulta =null;
+      Console.Write("Introduzca su consulta: ");
+      string consulta =Console.ReadLine();
+      try
+      {
+        expresionConsulta=Expresion.analiza(consulta);
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine (e.Message);
+        expresionConsulta =null;
+      }
+      if (expresionConsulta != null)
+      {
+        Console.WriteLine("Introduzca la descripcion de un vehiculo: ");
+        string descripcion=Console.Readline();
+        if (expresionConsulta.evalua(descripcion))
+          Console.WriteLine("La descripcion responde a la consulta");
+        else
+          Console.WriteLine("La descripcion no responde a la consulta");
+      }
+    }
+  }
