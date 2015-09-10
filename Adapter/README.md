@@ -2,7 +2,6 @@ Favor de explicar el Patron de este directorio a nuestros visitantes.
 
 
 Patron de diseno Adapter
-e.
 
 Para ello añadiremos un adaptador intermedio, que se encargará de realizar la conversión de una interface a otra.
 
