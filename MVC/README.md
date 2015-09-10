@@ -33,6 +33,7 @@ Las vistas son responsables de:
     Tienen un registro de su controlador asociado (normalmente porque además lo instancia).
     Pueden dar el servicio de "Actualización()", para que sea invocado por el controlador o por el modelo (cuando es un modelo activo que informa de los cambios en los datos producidos por otros agentes).
     
+https://codesystems.files.wordpress.com/2012/02/patronmvc1.png
 
 https://librosweb.es/img/symfony_1_2/f0201.png
 
