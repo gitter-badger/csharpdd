@@ -1,0 +1,5 @@
+/home/leslie/PDDLeslieCG-AbstractFactory/PDDLeslieCG-AbstractFactory/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/leslie/PDDLeslieCG-AbstractFactory/PDDLeslieCG-AbstractFactory/bin/Debug/PDDLeslieCG-AbstractFactory.exe.mdb
+/home/leslie/PDDLeslieCG-AbstractFactory/PDDLeslieCG-AbstractFactory/bin/Debug/PDDLeslieCG-AbstractFactory.exe
+/home/leslie/PDDLeslieCG-AbstractFactory/PDDLeslieCG-AbstractFactory/obj/x86/Debug/PDDLeslieCG-AbstractFactory.exe
+/home/leslie/PDDLeslieCG-AbstractFactory/PDDLeslieCG-AbstractFactory/obj/x86/Debug/PDDLeslieCG-AbstractFactory.exe.mdb

@@ -1,0 +1,5 @@
+/media/itt/UUI/Patrones de diseño/C#patrones/patron1bridgecsharp/patron1bridgecsharp/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/media/itt/UUI/Patrones de diseño/C#patrones/patron1bridgecsharp/patron1bridgecsharp/bin/Debug/patron1bridgecsharp.exe.mdb
+/media/itt/UUI/Patrones de diseño/C#patrones/patron1bridgecsharp/patron1bridgecsharp/bin/Debug/patron1bridgecsharp.exe
+/media/itt/UUI/Patrones de diseño/C#patrones/patron1bridgecsharp/patron1bridgecsharp/obj/x86/Debug/patron1bridgecsharp.exe
+/media/itt/UUI/Patrones de diseño/C#patrones/patron1bridgecsharp/patron1bridgecsharp/obj/x86/Debug/patron1bridgecsharp.exe.mdb

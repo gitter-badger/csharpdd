@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeJAHA", "PrototypeJAHA\PrototypeJAHA.csproj", "{866827A2-5825-4E87-B961-5D07AB8CAF79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{866827A2-5825-4E87-B961-5D07AB8CAF79}.Debug|x86.ActiveCfg = Debug|x86
+		{866827A2-5825-4E87-B961-5D07AB8CAF79}.Debug|x86.Build.0 = Debug|x86
+		{866827A2-5825-4E87-B961-5D07AB8CAF79}.Release|x86.ActiveCfg = Release|x86
+		{866827A2-5825-4E87-B961-5D07AB8CAF79}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PrototypeJAHA\PrototypeJAHA.csproj
+	EndGlobalSection
+EndGlobal

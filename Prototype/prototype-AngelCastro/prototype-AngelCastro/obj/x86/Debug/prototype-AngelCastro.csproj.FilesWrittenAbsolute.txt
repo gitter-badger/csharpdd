@@ -1,0 +1,5 @@
+/home/angel/csharpdd/Prototype/prototype-AngelCastro/prototype-AngelCastro/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/angel/csharpdd/Prototype/prototype-AngelCastro/prototype-AngelCastro/bin/Debug/prototype-AngelCastro.exe.mdb
+/home/angel/csharpdd/Prototype/prototype-AngelCastro/prototype-AngelCastro/bin/Debug/prototype-AngelCastro.exe
+/home/angel/csharpdd/Prototype/prototype-AngelCastro/prototype-AngelCastro/obj/x86/Debug/prototype-AngelCastro.exe
+/home/angel/csharpdd/Prototype/prototype-AngelCastro/prototype-AngelCastro/obj/x86/Debug/prototype-AngelCastro.exe.mdb
