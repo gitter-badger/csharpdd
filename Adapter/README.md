@@ -11,4 +11,6 @@ El patrón adaptador nos permite convertir o transformar una interface existente
 
 Es allí donde cobra importancia el patrón adaptador o adapter pattern, el cual nos permite a través de un componente intermedio entre las dos interfaces lograr que sean compatibles y lograr reutilizar nuestro código sin necesidad de repetirlo o acoplarlo fuertemente a alguna implementación en específico.
 
+imagen UML
+
 https://drive.google.com/file/d/0B1Kh0IPlUf8rQ3owYUtacXdtUDg/view?usp=sharing
