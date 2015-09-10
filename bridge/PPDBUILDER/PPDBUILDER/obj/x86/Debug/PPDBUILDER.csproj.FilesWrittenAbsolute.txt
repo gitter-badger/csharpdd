@@ -1,5 +1,0 @@
-/home/itt/csharpdd/bridge/PPDBUILDER/PPDBUILDER/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/itt/csharpdd/bridge/PPDBUILDER/PPDBUILDER/bin/Debug/PPDBUILDER.exe.mdb
-/home/itt/csharpdd/bridge/PPDBUILDER/PPDBUILDER/bin/Debug/PPDBUILDER.exe
-/home/itt/csharpdd/bridge/PPDBUILDER/PPDBUILDER/obj/x86/Debug/PPDBUILDER.exe
-/home/itt/csharpdd/bridge/PPDBUILDER/PPDBUILDER/obj/x86/Debug/PPDBUILDER.exe.mdb

@@ -1,5 +1,0 @@
-/home/lizbeth/Escritorio/prueba/Chain-OfR/Chain-OfR/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/lizbeth/Escritorio/prueba/Chain-OfR/Chain-OfR/bin/Debug/Chain-OfR.exe.mdb
-/home/lizbeth/Escritorio/prueba/Chain-OfR/Chain-OfR/bin/Debug/Chain-OfR.exe
-/home/lizbeth/Escritorio/prueba/Chain-OfR/Chain-OfR/obj/x86/Debug/Chain-OfR.exe
-/home/lizbeth/Escritorio/prueba/Chain-OfR/Chain-OfR/obj/x86/Debug/Chain-OfR.exe.mdb
