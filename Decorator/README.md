@@ -1,6 +1,7 @@
 Patron Decorator
 
 URL del UML: http://tinyurl.com/umldecorator
+URL del UML Espanol: http://tinyurl.com/UMLDecorator2
 
 El patron proporcionan una alternativa flexible a la herencia para extender funcionalidad.
 
