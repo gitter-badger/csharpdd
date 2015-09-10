@@ -71,7 +71,7 @@ public abstract class Expresion
       this.palabraClave=palabraClave;
     }
     
-    public override bool evaalua(string descripcion)
+    public override bool evalua(string descripcion)
     {
       return description.IndexOf(palabraClave) != -1;
     }
@@ -146,32 +146,6 @@ public abstract class Expresion
         siguientePieza();
         resultadoDerecho=OperadorY.parsea()
         resultadoIzquierdo=new OperadorO(resultadoIzquierdo,resultadoDerecho);
-      }
-      return resultadoIzquierdo;
-    }
-  }
-  
-//La clase concreta OperadorY implementa el metodo evalua y gestiona el analisis sintactico de un factor
-  using System;
-  public class OperadorY : OperadorBinario
-  {
-    public OperadorY (Expresion operandoIzquierdo, Expresion operandoDerecho):base (operandoIzquierdo, operandoDerecho) { }
-    
-    public override bool evalua (string descripcion)
-    {
-      return operandoIzquierdo.evalua(descipcion)&& operandoDerecho.evalua (descripcion);
-    }
-    
-    //parte analisis sintactico
-    public static new Expresion parsea()
-    {
-      Expresion resultadoIzquierdo, resultadoDerecho;
-      resultadoIzquierdo =Expresion.parsea();
-      while ((pieza != null) && (pieza== "y"))
-      {
-        siguientePieza();
-        resultadoDerecho =Expresion.parsea();
-        rsultadoIzquierdo=new OperadorY(resultadoIzquierdo, resultadoDerecho);
       }
       return resultadoIzquierdo;
     }
