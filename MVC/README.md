@@ -2,7 +2,7 @@
 
 Modelo Vista Controlador (MVC) es un estilo de arquitectura de software que separa los datos de una aplicación, la interfaz de usuario, y la lógica de control en tres componentes distintos.
 
-Se trata de un modelo muy maduro y que ha demostrado su validez a lo largo de los años en todo tipo de aplicaciones, y sobre multitud de lenguajes y plataformas de desarrollo.
+es decir, por un lado define componentes para la representación de la información, y por otro lado para la interacción del usuario.
 
 
     El Modelo, contiene una representación de los datos que maneja el sistema, su lógica de negocio, y sus mecanismos de persistencia.
