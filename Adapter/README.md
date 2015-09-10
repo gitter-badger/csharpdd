@@ -2,8 +2,7 @@ Favor de explicar el Patron de este directorio a nuestros visitantes.
 
 
 Patron de diseno Adapter
-
-Como se ilustra en la imagen que encabeza este artículo, el patrón Adapter sirve para hacer que dos interfaces, en principio diferentes, puedan comunicarse.
+e.
 
 Para ello añadiremos un adaptador intermedio, que se encargará de realizar la conversión de una interface a otra.
 
