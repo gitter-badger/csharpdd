@@ -3,7 +3,7 @@ using System;
 
 public abstract class Expresion
 {
-  public abstract bool ecalua (string descripcion);
+  public abstract bool evalua (string descripcion);
   
   //parte analisis sintactico
   protected static string fuente;
@@ -16,7 +16,7 @@ public abstract class Expresion
       indice++;
     if(indice==fuente.Length)
       pieza=null;
-    else if ((fuente[indice]=='(')||(funete[indice]==')'))
+    else if ((fuente[indice]=='(')||(fuente[indice]==')'))
     {
       pieza=fuente.Substring (indice,1);
       indice++;
@@ -133,7 +133,7 @@ public abstract class Expresion
     
     public override bool evalua(string descripcion)
     {
-      return operandoIzquierdo.evalua(descripcion) && operandoDerecho.evalua(descripcion)
+      return operandoIzquierdo.evalua(descripcion) && operandoDerecho.evalua(descripcion);
     }
     
     //parte analisis sintactico 
@@ -144,7 +144,7 @@ public abstract class Expresion
       while ((pieza != null) && (pieza == "o"))
       {
         siguientePieza();
-        resultadoDerecho=OperadorY.parsea()
+        resultadoDerecho=OperadorY.parsea();
         resultadoIzquierdo=new OperadorO(resultadoIzquierdo,resultadoDerecho);
       }
       return resultadoIzquierdo;
