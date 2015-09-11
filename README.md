@@ -48,3 +48,6 @@ PRESENTACION Y EVALUACION DE PDD DE APOYO AL GRUPO USADO GIT.
 3.- EL GRUPO SINCRONIZARÁ EL GIT Y CORRERÁ EL CÓDIGO QUE SE INDIQUE POR UD. GARANIZAR POR FAVOR ESTE LA VERSION FUNCIONAL SIN FALLO.
 SERÁ EL 50% DE LA BLOQUE 2 DE PDD.
 
+
+
+[![Join the chat at https://gitter.im/tectijuana/csharpdd](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tectijuana/csharpdd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
